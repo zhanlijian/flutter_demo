@@ -28,10 +28,7 @@ class _HomaPageState extends State<HomaPage> {
         RaisedButton(
           child: Text("我是button"),
           onPressed: () {
-            setState(() {
-              this.list.add("133");
-              this.list.add("3253453463467333");
-            });
+            Navigator.pushNamed(context, '/appBar');
           },
         ),
         SizedBox(height: 20),

@@ -5,14 +5,18 @@ import "tabs/Shopping.dart";
 import "tabs/Menu.dart";
 
 class Tabs extends StatefulWidget {
-  Tabs({Key key}) : super(key: key);
+  final index;
+  Tabs({Key key, this.index = 0}) : super(key: key);
 
   @override
-  _TabsState createState() => new _TabsState();
+  _TabsState createState() => new _TabsState(this.index);
 }
 
 class _TabsState extends State<Tabs> {
-  int _currentIndex = 0;
+  int _currentIndex;
+  _TabsState(index) {
+    this._currentIndex = index;
+  }
   List _tabList = [HomaPage(), AlarmPage(), ShoppingPage(), MenuPage()];
   @override
   Widget build(BuildContext context) {

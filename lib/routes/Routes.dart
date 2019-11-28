@@ -4,11 +4,15 @@ import '../pages/Tabs.dart';
 import '../pages/Form.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
+import '../pages/AppBar.dart';
+import '../pages/user/Login.dart';
 
 final routes = {
   "/": (context) => Tabs(),
   "/form": (context) => FormPage(),
   "/product": (context) => ProductPage(),
+  "/appBar": (context) => AppBarPage(),
+  "/login": (context) => LoginPage(),
   "/product-info": (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
 };
