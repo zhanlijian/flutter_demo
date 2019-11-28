@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/Tabs.dart';
+import 'routes/Routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,6 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Tabs());
+    return MaterialApp(initialRoute: "/", onGenerateRoute: onGenerateRoute);
   }
 }

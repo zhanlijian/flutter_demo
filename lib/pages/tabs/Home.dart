@@ -48,9 +48,16 @@ class _HomaPageState extends State<HomaPage> {
           child: Text("我是countNum++"),
           textTheme: ButtonTextTheme.primary,
           onPressed: () {
-            print(context);
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => FormPage(title: "我是合伙人")));
+          },
+        ),
+        SizedBox(height: 20),
+        RaisedButton(
+          child: Text("调整到form"),
+          textTheme: ButtonTextTheme.primary,
+          onPressed: () {
+            Navigator.pushNamed(context, "/product");
           },
         )
       ],
