@@ -26,7 +26,7 @@ class _HomaPageState extends State<HomaPage> {
           label: Text('${this.countNum}'),
         ),
         RaisedButton(
-          child: Text("我是button"),
+          child: Text("我是button跳转到appbar实例"),
           onPressed: () {
             Navigator.pushNamed(context, '/appBar');
           },
@@ -42,7 +42,7 @@ class _HomaPageState extends State<HomaPage> {
         ),
         SizedBox(height: 20),
         RaisedButton(
-          child: Text("我是countNum++"),
+          child: Text("我是form跳转"),
           textTheme: ButtonTextTheme.primary,
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
@@ -51,7 +51,7 @@ class _HomaPageState extends State<HomaPage> {
         ),
         SizedBox(height: 20),
         RaisedButton(
-          child: Text("调整到form"),
+          child: Text("跳转到product"),
           textTheme: ButtonTextTheme.primary,
           onPressed: () {
             Navigator.pushNamed(context, "/product");
