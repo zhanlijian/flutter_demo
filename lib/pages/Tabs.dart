@@ -23,6 +23,14 @@ class _TabsState extends State<Tabs> {
     return Scaffold(
       appBar: AppBar(
         title: Text("flutter Demo"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.account_balance_wallet),
+            onPressed: () {
+              Navigator.pushNamed(context, '/tabBarController');
+            },
+          )
+        ],
       ),
       body: this._tabList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(

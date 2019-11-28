@@ -6,6 +6,7 @@ import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
 import '../pages/AppBar.dart';
 import '../pages/user/Login.dart';
+import '../pages/TabBarController.dart';
 
 final routes = {
   "/": (context) => Tabs(),
@@ -15,6 +16,7 @@ final routes = {
   "/login": (context) => LoginPage(),
   "/product-info": (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
+  "/tabBarController": (context) => TabBarControllerPage(),
 };
 
 //固定写法

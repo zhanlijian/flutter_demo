@@ -54,7 +54,7 @@ class _AppBarPageState extends State<AppBarPage> {
                     ),
                   )
                 ],
-                isScrollable: true,
+                // isScrollable: true,
                 indicatorColor: Color(0xffff0000),
                 indicatorWeight: 2,
                 indicatorSize: TabBarIndicatorSize.tab,
