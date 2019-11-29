@@ -56,6 +56,14 @@ class _HomaPageState extends State<HomaPage> {
           onPressed: () {
             Navigator.pushNamed(context, "/product");
           },
+        ),
+        SizedBox(height: 20),
+        RaisedButton(
+          child: Text("跳转到buttons"),
+          textTheme: ButtonTextTheme.primary,
+          onPressed: () {
+            Navigator.pushNamed(context, "/buttons");
+          },
         )
       ],
     );

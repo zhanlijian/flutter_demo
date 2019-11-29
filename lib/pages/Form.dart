@@ -37,7 +37,7 @@ class FormPage extends StatelessWidget {
               title: Text("个人中心"),
               leading: CircleAvatar(child: Icon(Icons.people)),
               onTap: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).pop(); //隐藏侧边栏 抽屉
               }),
           Divider(),
           ListTile(
