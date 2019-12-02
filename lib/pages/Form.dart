@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 
-class FormPage extends StatelessWidget {
+class FormPage extends StatefulWidget {
   final String title;
-  FormPage({this.title = "我是表单"});
+  FormPage({Key key, this.title}) : super(key: key);
+  @override
+  _FormPageState createState() => new _FormPageState(title: this.title);
+}
+
+class _FormPageState extends State<FormPage> {
+// class FormPage extends StatelessWidget {
+  final String title;
+  TextEditingController _username = TextEditingController();
+  _FormPageState({this.title = "我是表单"});
+
+  @override
+  void initState() {
+    super.initState();
+    _username.text = '这是文本框初始值';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,6 +116,30 @@ class FormPage extends StatelessWidget {
             title: Text("我是title"),
             subtitle: Text("我是subtilte"),
           ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: TextField(
+              // maxLines: 5,
+              // obscureText: true,
+              decoration: InputDecoration(
+                  hintText: "密码框",
+                  // border: OutlineInputBorder(),
+                  fillColor: Colors.blue.shade100,
+                  filled: true,
+                  helperText: 'help',
+                  prefixIcon: Icon(Icons.local_airport),
+                  suffixText: 'airport',
+                  labelText: "表单名称",
+                  labelStyle: TextStyle(color: Colors.blue)),
+              controller: _username,
+              onChanged: (value) {
+                print(value);
+                setState(() {
+                  this._username.text = value;
+                });
+              },
+            ),
+          )
         ],
       ),
     );
